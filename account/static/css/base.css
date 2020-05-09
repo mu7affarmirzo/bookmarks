@@ -1,0 +1,18 @@
+body{
+	text-align: center;
+}
+input{
+	background-color: lightgreen;
+	border: 0px solid lightgreen;
+	padding: 5px;
+}
+#header{
+	padding: 10px 10px 10px 10px;
+	background-color: lightgreen;
+	top: 0;
+	left: 0;
+	color: white;
+	font-size: 25px;
+	z-index: 0;
+	margin: -10px;
+}
