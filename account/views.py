@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm
+from django.contrib.auth.views import PasswordChangeView,PasswordChangeDoneView
 
 from django.contrib.auth.decorators import login_required
 
