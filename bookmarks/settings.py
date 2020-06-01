@@ -41,11 +41,20 @@ INSTALLED_APPS = [
     'social_django',
 ]
 
+
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
     'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.google.GoogleOAuth2',
 ]
+SOCIAL_AUTH_FACEBOOK_KEY = '1487493244786052'
+SOCIAL_AUTH_FACEBOOK_SECRET = '7e29f3d6b4778317f81c84bd3617726d'
+
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '848014840401-kaskbljk1fr6h8lqsqq48i1n7csresaj.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'mj8-Qbhsm8hN9aOylpkBb402'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -130,6 +139,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
