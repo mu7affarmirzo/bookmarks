@@ -3,6 +3,16 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import ImageCreateForm
 
+from django.shortcuts import get_object_or_404
+from .models import ImageModel
+
+def image_detail(request, id, slug):
+    image = get_object_or_404(ImageModel, id=id, slug=slug)
+    return render(request,
+                  'images/image/detail.html',
+                  {'section':'images',
+                   'image':image})
+
 @login_required
 def image_create(request):
     if request.method == 'POST':
