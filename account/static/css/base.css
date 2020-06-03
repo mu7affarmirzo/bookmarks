@@ -15,4 +15,28 @@ input{
 	font-size: 25px;
 	z-index: 0;
 	margin: -10px;
+
+	list-style-type: none;
+  	overflow: hidden;
+
+}
+#header .logo{
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+#header .user{
+	float: right;
+}
+#header ul{
+	list-style-type: none;
+	text-align: center;
+}
+#header li{
+	float: left;
+}
+#header li a{
+	display: block;
+	padding: 16px;
+  	text-decoration: none;
 }
